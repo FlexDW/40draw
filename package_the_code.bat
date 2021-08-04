@@ -1,0 +1,1 @@
+pyinstaller 40draw.py
