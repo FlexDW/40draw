@@ -6,6 +6,7 @@
 *.py[cod]
 **/.Trash-0/
 docker-compose.yml
+dockerfile
 
 # except
 !**/.gitkeep
