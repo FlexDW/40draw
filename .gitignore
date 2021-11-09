@@ -1,0 +1,11 @@
+**/.vscode
+**/.DS_Store
+**/data/*
+**/.ipynb*/
+**/__pycache__/
+*.py[cod]
+**/.Trash-0/
+docker-compose.yml
+dockerfile
+# except
+!**/.gitkeep
