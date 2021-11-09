@@ -28,6 +28,7 @@ app.layout = html.Div([
 tiers.register_callbacks(app)
 results.register_callbacks(app)
 
+server = app.server
 
 if __name__ == '__main__':
     app.run_server()
