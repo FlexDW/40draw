@@ -1,10 +1,7 @@
-import json
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output, State, MATCH, ALL
-import run_simulations
+from dash import html, Input, Output, State, ALL
 from dash.exceptions import PreventUpdate
+
+import run_simulations
 
 def render():
     return html.P('Press Submit to generate results', id='results-output')
@@ -54,5 +51,5 @@ def register_callbacks(app):
                 or any([value != round(value) for value in tiers.values()])
                 ):
                 return "Please enter a positive integer value for all tiers"
-            
+
             return run_simulations.get_result(tiers, n_cards_to_win, n_simulations)

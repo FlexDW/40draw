@@ -1,10 +1,7 @@
 import os
 import json
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output, State, MATCH, ALL
-from dash.exceptions import PreventUpdate
+from dash import html
 from layouts import tiers, results
 
 app = dash.Dash(__name__)
@@ -31,4 +28,8 @@ results.register_callbacks(app)
 server = app.server
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(
+        host='0.0.0.0',
+        port=3539,
+        debug=True,
+    )
